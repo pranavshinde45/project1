@@ -1,0 +1,18 @@
+<%- layout("layouts/boilerplate.ejs") %>
+<%- include("./includes/filter.ejs") %><hr/>
+<div class="row row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-1">
+    <%for(let el of categories){%>
+        <a href="/listing/<%=el._id%>" class="anc">
+          <div class="card card1 col">
+            <img src="<%=el.image.url%>" class="card-img-top" alt="images" style="height:20rem">
+            <div class="card-body">
+              <h5 class="card-title"><%=el.title%></h5>
+              <div class="info">
+                <p class="card-text">&#8377;<%=el.price.toLocaleString("en-IN")%>/night</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="gst">+18% GST</i>
+              </div>
+            </div>
+          </div>
+        </a>
+    <%}%>
+</div>

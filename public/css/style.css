@@ -1,0 +1,120 @@
+body{
+  font-family: "Plus Jakarta Sans", serif !important;
+  font-optical-sizing: auto !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  display: flex;
+  flex-direction: column;
+  height:100vh;
+}
+.container{
+    flex:1;
+}
+.fa-compass{
+    font-size: 2rem;
+    color:#fe424d;
+}
+.nav-link{
+    color:black;
+}
+.navbar{
+    background-color: aliceblue;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px;
+    background-color: rgb(209, 209, 209);
+}
+.icons,.name,.terms{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    color:black;
+}
+.icons i{
+    font-size:2rem;
+    margin-left: 5px;
+}
+.name{
+    margin-top: 5px;;
+}
+.card{
+    border:none;
+    margin-top: 20px;
+}
+.card1{
+    opacity: 1;
+}
+.card1:hover{
+    opacity: 0.75;
+}
+.card img{
+    border-radius:7px !important;
+}
+.card-body{
+    padding:0px;
+}
+.anc{
+    text-decoration: none;
+}
+
+/* new listing */
+.newbtn{
+    background-color: #fe424d;
+    border:none;
+}
+.newlist{
+    background-color: rgb(212, 242, 235);
+    border-radius: 10px;
+}
+
+/* edit listing */
+.editlist{
+    background-color: rgb(212, 242, 235);
+    border-radius: 10px;
+}
+
+/* show specific listing */
+.btns{
+    display: flex;
+    align-items: center;
+}
+.btn2{
+    margin-left:20px;
+}
+.btn{
+    border: none;
+}
+.valid {
+    border: 2px solid green;
+}
+
+.invalid {
+    border: 2px solid red;
+}
+.necessary{
+    color:red;
+}
+
+/* reviews */
+.cards{
+    border:2px solid black;
+}
+.gst{
+    display: none;
+}
+.info{
+    display: flex;
+}
+a{
+    text-decoration: none;
+    color:black
+}
+i{
+    font-weight: bolder;
+}

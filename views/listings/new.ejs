@@ -1,0 +1,59 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<body>
+    <br/>
+    <div class="row offset-1 newlist">
+      <form method="post" action="/listing" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="col-8">
+            <h1>Create a new listing</h1>
+            <div>
+                <label for="title" class="form-label">Title</label>
+                <input type="text" placeholder="enter title" name="listing[title]" class="form-control"  required>
+                <div class="valid-feedback">Title looks good!</div>
+            </div>
+            <div>
+                <label for="description" class="form-label">description</label>
+                <textarea type="text" placeholder="write description about the place" name="listing[description]" class="form-control" required></textarea>
+                <div class="invalid-feedback">description should be valid</div>
+            </div>
+            <div>
+                <label for="image" class="form-label">image</label>
+                <input type="file" name="listing[image]" class="form-control" required>
+                <div class="invalid-feedback">link should be valid</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="price" class="form-label">price</label>
+                    <input type="Number" placeholder="price" name="listing[price]" class="form-control" required>
+                    <div class="invalid-feedback">price should be valid</div>
+                </div>
+                <div class="col-md-8">
+                    <label for="country" class="form-label">country</label>
+                    <input type="text" placeholder="country" name="listing[country]" class="form-control" required>
+                    <div class="invalid-feedback">country should be valid</div>
+                </div>
+            </div>
+            <div>
+                <label for="location" class="form-label">location</label>
+                <input type="text" placeholder="location" name="listing[location]" class="form-control" required>
+                <div class="invalid-feedback">location should be valid</div>
+            </div><br/>
+            <label for="category" class="form-label">Choose a category:</label>
+            <select name="listing[category]" id="category" class="form-control">
+              <option value="amazingView">amazingView</option>
+              <option value="pools">pools</option>
+              <option value="beaches">beaches</option>
+              <option value="castles">castles</option>
+              <option value="rooms">rooms</option>
+              <option value="island">island</option>
+              <option value="trending">trending</option>
+              <option value="mountains">mountains</option>
+              <option value="historicalHomes">historicalHomes</option>
+            </select>
+            <p class="necessary"></p>
+            <div>
+                <button type="submit" class="btn btn-dark newbtn">Add1</button>
+            </div><br/>
+        </div>
+      </form> 
+    </div><br/>
+</body>

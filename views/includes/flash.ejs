@@ -1,0 +1,14 @@
+<!-- here we are taking success.length because success is an array and it exist every time so if array length is also 0 at that time we have to perform following opearations -->
+<%if(success && success.length){%>
+    <div class="alert alert-success alert-dismissible col-4 offset-4 mt-2" role="alert" id="flash">
+        <%=success%>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" offset="3"></button>
+    </div>
+<%}%>
+
+<%if(error && error.length){%>
+    <div class="alert alert-danger alert-dismissible col-4 offset-4 mt-2" role="alert" id="flash">
+        <%=error%>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" offset="3"></button>
+    </div>
+<%}%>

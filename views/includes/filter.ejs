@@ -1,0 +1,101 @@
+
+<style>
+    .filters{
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+    .filter{
+      margin-right:30px;
+      margin-top: 22px;
+      margin-bottom:0px;
+      opacity:1;
+    }
+    .filter:hover{
+      opacity:0.6;
+      cursor: pointer;
+    }
+    .tax-toggle{
+      border:2px solid black;
+      height:50px;
+      padding:10px;
+      border-radius: 10px;
+      margin:auto;
+    }
+</style>
+<div class="filters">
+  <a href="/listing/category?category=amazingView">
+    <div class="filter">
+      <div><i class="fa-solid fa-eye"></i></div>
+      <p>Amazing view</p>
+    </div>
+  </a>
+  <a href="/listing/category?category=pools">
+    <div class="filter">
+      <div><i class="fa-solid fa-person-swimming"></i></div>
+      <p>Pools</p>
+   </div>
+  </a>
+  <a href="/listing/category?category=beaches">
+    <div class="filter">
+        <div><i class="fa-solid fa-umbrella-beach"></i></div>
+        <p>Beaches</p>
+    </div>
+  </a>
+  <a href="/listing/category?category=castles">
+    <div class="filter">
+        <div><i class="fa-solid fa-chess-rook"></i></div>
+       <p>Castles</p>
+    </div>
+  </a>
+  <a href="/listing/category?category=rooms">
+    <div class="filter">
+        <div><i class="fa-solid fa-bed"></i></div>
+        <p>Rooms</p>
+    </div>
+  </a>
+  <a href="/listing/category?category=island">
+    <div class="filter">
+        <div><i class="fa-solid fa-water"></i></div>
+       <p>island</p>
+    </div>
+  </a>
+  <a href="/listing/category?category=trending">
+    <div class="filter">
+        <div><i class="fa-solid fa-fire"></i></div>
+        <p>Trending</p>
+    </div>
+  </a>
+  <a href="/listing/category?category=historicalHomes">
+    <div class="filter">
+        <div><i class="fa-solid fa-house-user"></i></div>
+        <p>historical homes</p>
+    </div>
+  </a>
+  <a href="/listing/category?category=mountains">
+    <div class="filter">
+        <div><i class="fa-solid fa-mountain-sun"></i></div>
+        <p>mountains</p>
+    </div>
+  </a>
+  <div class="tax-toggle">
+    <div class="form-check form-switch form-check-reverse custom-switch">
+      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+      <label class="form-check-label" for="flexSwitchCheckDefault">Display total after taxes</label>
+    </div>
+  </div>
+</div>
+<script>
+    let taxswitch=document.querySelector("#flexSwitchCheckDefault")
+    taxswitch.addEventListener("click",()=>{
+      let gst=document.querySelectorAll(".gst")
+      console.log(gst);
+      for(el of gst){
+        if(el.style.display!="inline"){
+          el.style.display="inline"
+        }else{
+          el.style.display="none";
+        }
+      }
+    })
+</script>
